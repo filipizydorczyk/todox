@@ -7,12 +7,10 @@ export default class Checklist extends Collection {
     };
     defaultPolicy = new Policies.Owner();
 
-    async init(app: App, name: string) {
+    async init(app: TodoxServer, name: string) {
         await super.init(app, name);
         this.on("before:create", async ([context, item]) => {
-            const users_checklists = await (
-                app as TodoxServer
-            ).collections.checklists
+            const users_checklists = await app.collections.checklists
                 .list(context)
                 .fetch();
             if (users_checklists.items.length > 0) {
