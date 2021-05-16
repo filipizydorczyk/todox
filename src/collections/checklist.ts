@@ -5,6 +5,9 @@ export default class Checklist extends Collection {
     fields = {
         text: FieldTypes.Required(new FieldTypes.Text()),
     };
+    policies = {
+        create: new Policies.LoggedIn(),
+    };
     defaultPolicy = new Policies.Owner();
 
     async init(app: TodoxServer, name: string) {

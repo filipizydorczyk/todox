@@ -35,7 +35,7 @@ export default class TodoxServer extends App {
         ...App.BaseCollections,
         users: App.BaseCollections.users.setPolicy(
             "create",
-            new Policies.Noone()
+            new Policies.Or([new Policies.Noone(), new Policies.Super()])
         ),
         checklists: new Checklist(),
         categories: new Category(),
