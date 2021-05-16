@@ -6,7 +6,7 @@
     "scripts": {
         "start": "node .",
         "build": "tsc -p src",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "ts-mocha -p src/tsconfig.json tests/*.test.ts"
     },
     "keywords": [
         "todo",
@@ -15,6 +15,13 @@
     "author": "Filip Izydorczyk",
     "license": "ISC",
     "dependencies": {
-        "sealious": "^0.13.38"
+        "sealious": "^0.13.38",
+        "typescript": "^4.2.4"
+    },
+    "devDependencies": {
+        "@types/expect": "^24.3.0",
+        "@types/mocha": "^8.2.2",
+        "mocha": "^8.4.0",
+        "ts-mocha": "^8.0.0"
     }
 }

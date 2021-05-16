@@ -16,8 +16,13 @@ const validate_item = async (
     context: Context,
     item: CollectionItem
 ) => {
-    const category = item.get("category");
-    const core_category = item.get("core_category");
+    await item.decode(context);
+
+    const category = item.body.raw_input.category as string;
+    const core_category = item.body.raw_input.core_category as string;
+
+    console.log(category);
+    console.log(core_category);
 
     if (category) {
         const ct = await app.collections.categories.getByID(context, category);

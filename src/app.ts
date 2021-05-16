@@ -2,6 +2,7 @@ import { resolve } from "path";
 import { App, Policies } from "sealious";
 import Checklist from "./collections/checklist";
 import Category from "./collections/category";
+import Task from "./collections/task";
 
 export default class TodoxServer extends App {
     config = {
@@ -38,5 +39,6 @@ export default class TodoxServer extends App {
         ),
         checklists: new Checklist(),
         categories: new Category(),
+        tasks: new Task(),
     };
 }
