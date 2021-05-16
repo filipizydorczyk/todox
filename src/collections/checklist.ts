@@ -3,7 +3,7 @@ import TodoxServer from "../app";
 
 export default class Checklist extends Collection {
     fields = {
-        text: new FieldTypes.Text(),
+        text: FieldTypes.Required(new FieldTypes.Text()),
     };
     defaultPolicy = new Policies.Owner();
 
