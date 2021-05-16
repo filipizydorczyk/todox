@@ -36,7 +36,7 @@ export default class Task extends Collection {
     fields = {
         text: FieldTypes.Required(new FieldTypes.Text()),
         done: new Donelean(),
-        category: new FieldTypes.SingleReference("category"),
+        category: new FieldTypes.SingleReference("categories"),
         core_category: new FieldTypes.Enum([
             CoreCategories.FreeTime,
             CoreCategories.Work,
