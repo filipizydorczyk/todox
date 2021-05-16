@@ -21,9 +21,6 @@ const validate_item = async (
     const category = item.body.raw_input.category as string;
     const core_category = item.body.raw_input.core_category as string;
 
-    console.log(category);
-    console.log(core_category);
-
     if (category) {
         const ct = await app.collections.categories.getByID(context, category);
 
