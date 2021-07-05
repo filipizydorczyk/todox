@@ -1,3 +1,7 @@
+# Project status
+
+I stopped developing this project because I no longer needed this. Maybe I will comeback to this project one day.
+
 ![](./assets/logo.png)
 
 Simple rest server (still in progress) based on [sealious](https://github.com/sealcode/sealious) that is going to be my personal todo app.
